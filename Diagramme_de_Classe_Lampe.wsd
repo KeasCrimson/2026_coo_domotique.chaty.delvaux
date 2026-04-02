@@ -1,0 +1,27 @@
+@startuml
+title Diagramme_de_Classe_Lampe
+
+class Lampe{
+    +nom : String
+    +allumee : boolean
+
+    +Lampe(String):
+    +allumer(): boolean
+    +eteindre(): boolean
+    +toString(): String
+}
+
+
+class Telecommande{
+    +Telecommande():
+    +ajouterLampe(Lampe):
+    +activerLampe(int):
+    +desactiverLampe(int):
+    +activerTout():
+    +toString(): String
+
+}
+
+Telecommande-->"*" Lampe: +lampes
+
+@enduml
