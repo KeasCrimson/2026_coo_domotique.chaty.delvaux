@@ -2,8 +2,8 @@
 title Diagramme_de_Classe_Lampe
 
 class Lampe{
-    +nom : String
-    +allumee : boolean
+    -nom : String
+    -allumee : boolean
 
     +Lampe(String):
     +allumer(): boolean
@@ -22,6 +22,6 @@ class Telecommande{
 
 }
 
-Telecommande-->"*" Lampe: +lampes
+Telecommande-->"*" Lampe: -lampes
 
 @enduml
