@@ -1,43 +1,68 @@
 import java.util.ArrayList;
 
 public class Telecommande {
-    public ArrayList<Lampe> lampes;
+    public ArrayList<Lampe> telecommande;
+    private ArrayList<Hifi> telecommandehifi;
     public Telecommande() {
-        lampes = new ArrayList<Lampe>();
+        telecommande = new ArrayList<Lampe>();
+        telecommandehifi = new ArrayList<Hifi>();
     }
     public void ajouterLampe(Lampe l) {
-        lampes.add(l);
+        telecommande.add(l);
+    }
+    public void ajouterHifi(Hifi f) {
+        telecommandehifi.add(f);
     }
 
     public boolean activerLampe(int n) {
         boolean activation = false;
-        if (0 <= n && n < lampes.size()) {
-            lampes.get(n).allumer();
+        if (0 <= n && n < telecommande.size()) {
+            telecommande.get(n).allumer();
+            activation = true;
+        }
+        return activation;
+    }
+    public boolean activerHifi(int n) {
+        boolean activation = false;
+        if (0 <= n && n < telecommandehifi.size()) {
+            telecommandehifi.get(n).allumer();
             activation = true;
         }
         return activation;
     }
     public boolean desactiverLampe(int n) {
         boolean desactiver = false;
-        if (0 <= n && n < lampes.size()) {
-                lampes.get(n).eteindre();
+        if (0 <= n && n < telecommande.size()) {
+            telecommande.get(n).eteindre();
                 desactiver = true;
         }
         return desactiver;
     }
+    public boolean desactiverHifi(int n) {
+        boolean activation = false;
+        if (0 <= n && n < telecommandehifi.size()) {
+            telecommandehifi.get(n).eteindre();
+            activation = true;
+        }
+        return activation;
+    }
     public boolean activerTout() {
         int i = 0;
         boolean activer = false;
-        while (i < lampes.size()) {
-            lampes.get(i).allumer();
+        while (i < telecommande.size() && i < telecommandehifi.size()) {
+            telecommande.get(i).allumer();
+            telecommandehifi.get(i).allumer();
             i++;
         }
         return activer;
     }
     public String toString() {
         String resultat = "";
-        for (int i = 0; i < lampes.size(); i++) {
-            resultat += lampes.get(i).toString();
+        for (int i = 0; i < telecommande.size(); i++) {
+            resultat += telecommande.get(i).toString();
+        }
+        for (int i = 0; i < telecommandehifi.size(); i++) {
+            resultat += telecommandehifi.toString();
         }
         return resultat;
     }
