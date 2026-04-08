@@ -59,10 +59,10 @@ public class Telecommande {
     public String toString() {
         String resultat = "";
         for (int i = 0; i < telecommande.size(); i++) {
-            resultat += telecommande.get(i).toString();
+            resultat += telecommande.get(i).toString()+"\n";
         }
         for (int i = 0; i < telecommandehifi.size(); i++) {
-            resultat += telecommandehifi.toString();
+            resultat += telecommandehifi.toString()+"\n";
         }
         return resultat;
     }
