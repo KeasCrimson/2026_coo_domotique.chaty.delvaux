@@ -5,19 +5,39 @@ public class Telecommande {
     public Telecommande() {
     }
     public void ajouterLampe(Lampe l) {
-        throw new Error("code non écrit");
+        lampes.add(l);
     }
 
     public boolean activerLampe(int n) {
-        throw new Error("code non écrit");
+        boolean activation = false;
+        if (0 <= n) {
+            lampes.get(n).allumer();
+            activation = true;
+        }
+        return activation;
     }
     public boolean desactiverLampe(int n) {
-        throw new Error("code non écrit");
+        boolean desactiver = false;
+        if (0 <= n) {
+                lampes.get(n).eteindre();
+                desactiver = true;
+        }
+        return desactiver;
     }
     public boolean activerTout() {
-        throw new Error("code non écrit");
+        int i = 0;
+        boolean activer = false;
+        while (i < lampes.size()) {
+            lampes.get(i).allumer();
+            i++;
+        }
+        return activer;
     }
     public String toString() {
-        throw new Error("code non écrit");
+        String resultat = "";
+        for (int i = 0; i < lampes.size(); i++) {
+            resultat += lampes.get(i).toString();
+        }
+        return resultat;
     }
 }
