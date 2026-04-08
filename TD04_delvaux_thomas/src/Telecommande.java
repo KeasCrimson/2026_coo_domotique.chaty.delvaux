@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Telecommande {
     public ArrayList<Lampe> lampes;
     public Telecommande() {
+        lampes = new ArrayList<Lampe>();
     }
     public void ajouterLampe(Lampe l) {
         lampes.add(l);
