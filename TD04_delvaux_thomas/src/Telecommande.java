@@ -46,7 +46,6 @@ public class Telecommande {
         }
         return activation;
     }
-    // Activetion de toutes les lampes
     public boolean activerTout() {
         int i = 0;
         boolean activer = false;
