@@ -11,7 +11,7 @@ public class Telecommande {
 
     public boolean activerLampe(int n) {
         boolean activation = false;
-        if (0 <= n && n <= lampes.size()) {
+        if (0 <= n && n < lampes.size()) {
             lampes.get(n).allumer();
             activation = true;
         }
@@ -19,7 +19,7 @@ public class Telecommande {
     }
     public boolean desactiverLampe(int n) {
         boolean desactiver = false;
-        if (0 <= n && n <= lampes.size()) {
+        if (0 <= n && n < lampes.size()) {
                 lampes.get(n).eteindre();
                 desactiver = true;
         }
