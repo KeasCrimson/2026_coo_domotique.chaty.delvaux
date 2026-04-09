@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Telecommande implements Peripherique{
+public class Telecommande {
     public ArrayList<Peripherique> peripherie;
     public Telecommande() {
         peripherie = new ArrayList<Peripherique>();
@@ -28,7 +28,7 @@ public class Telecommande implements Peripherique{
     public boolean desactiverPeripherique(int n) {
         boolean activation = false;
         if (0 <= n && n < peripherie.size()) {
-            peripherie.get(n).remove();
+            peripherie.get(n).eteindre();
             activation = true;
         }
         return activation;

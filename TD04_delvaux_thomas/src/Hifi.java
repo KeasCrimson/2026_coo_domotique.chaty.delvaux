@@ -18,13 +18,18 @@ class Hifi implements Peripherique{
 		if (this.son > 100)
 			this.son = 100;
 	}
+	public void allumer() {
+		augmenterSon();
+	}
 
 	/**
 	 * permet d'eteindre la chaine (son mis a 0)
 	 */
 	public void baisserSon() {
 		this.son = 0;
-
+	}
+	public void eteindre() {
+		baisserSon();
 	}
 
 	/**
