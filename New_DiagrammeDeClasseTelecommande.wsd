@@ -25,7 +25,16 @@ class Telecommande{
     +desactiverAppareil(int):
     +activerTout():
     +toString(): String
+}
 
+class Television{
+    -nom : String
+    -allumee: boolean
+
+    +Television(String):
+    +allumer():
+    +eteindre():
+    +toString(): String
 }
 
 class Hifi{
@@ -39,5 +48,6 @@ class Hifi{
 Lampe..|> Appareil
 Hifi..|> Appareil
 Telecommande-->"*"Appareil: -appareils
+Television..|>Appareil
 
 @enduml
