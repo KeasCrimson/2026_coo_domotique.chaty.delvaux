@@ -1,0 +1,43 @@
+@startuml
+
+'''class
+class Telecommande {
+  + Telecommande()
+  + ajouterLampe(Lampe l)
+  + ajouterHifi(Hifi f)
+  + activerLampe(int n) : boolean
+  + activerHifi(int n) : boolean
+  + desactiverLampe(int n) : boolean
+  + desactiverHifi(int n) : boolean
+  + activerTout() : boolean
+  + toString() : String
+}
+class Lampe {
+  - nom : String
+  - allumee : boolean
+  + Lampe(String s)
+  + allumer()
+  + eteindre()
+  + toString() : String
+  + isAllume() : boolean
+}
+
+class Hifi {
+  - son : int
+  + allumer()
+  + eteindre()
+  + toString() : String
+}
+
+class Television {
+  - son : int
+  + allumer()
+  + eteindre()
+  + toString() : String
+}
+
+''' relation
+Telecommande "1" --> "*" Lampe : - lampes
+Telecommande "1" --> "*" Hifi : - hifis
+Telecommande "1" --> "*" Television : - televisions
+@enduml
