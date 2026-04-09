@@ -3,12 +3,9 @@
 '''class
 class Telecommande {
   + Telecommande()
-  + ajouterLampe(Lampe l)
-  + ajouterHifi(Hifi f)
-  + activerLampe(int n) : boolean
-  + activerHifi(int n) : boolean
-  + desactiverLampe(int n) : boolean
-  + desactiverHifi(int n) : boolean
+  + allumerPeripherique() : boolean
+  + eteindrePeripherique() : boolean
+  + activerPeripherique() : boolean
   + activerTout() : boolean
   + toString() : String
 }
@@ -16,28 +13,34 @@ class Lampe {
   - nom : String
   - allumee : boolean
   + Lampe(String s)
-  + allumer()
-  + eteindre()
+  + allumer() : boolean
+  + eteindre() : boolean
   + toString() : String
   + isAllume() : boolean
 }
 
 class Hifi {
   - son : int
-  + allumer()
-  + eteindre()
+  + allumer() : boolean
+  + eteindre() : boolean
   + toString() : String
 }
 
 class Television {
   - son : int
-  + allumer()
-  + eteindre()
+  + allumer() : boolean
+  + eteindre() : boolean
+  + toString() : String
+}
+interface Peripherique {
+  + allumer() : boolean
+  + eteindre() : boolean
   + toString() : String
 }
 
 ''' relation
-Telecommande "1" --> "*" Lampe : - lampes
-Telecommande "1" --> "*" Hifi : - hifis
-Telecommande "1" --> "*" Television : - televisions
+Telecommande "1" --> "*" Peripherique
+Peripherique <|.. Lampe
+Peripherique <|.. Hifi
+Peripherique <|.. Television
 @enduml
