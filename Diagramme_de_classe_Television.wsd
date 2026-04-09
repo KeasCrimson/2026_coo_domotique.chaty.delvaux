@@ -16,10 +16,13 @@ class Telecommande{
     +Telecommande():
     +ajouterLampe(Lampe):
     +ajouterHifi(Hifi):
+    +ajouterTele(Television):
     +activerLampe(int):
-    +activerHifi(int)
+    +activerHifi(int):
+    +activerTele(int):
     +desactiverLampe(int):
     +desactiverHifi(int):
+    +desactiverTele(int):
     +activerTout():
     +toString(): String
 
@@ -33,7 +36,18 @@ class Hifi{
     +toString(): String
 }
 
+class Television{
+    -nom : String
+    -allumee: boolean
+
+    +Television(String):
+    +allumer():
+    +eteindre():
+    +toString(): String
+}
+
 Telecommande-->"*" Hifi: -hifis
 Telecommande-->"*" Lampe: -lampes
+Telecommande-->"*" Television: -televisions
 
 @enduml

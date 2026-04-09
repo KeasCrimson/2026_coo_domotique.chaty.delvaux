@@ -11,15 +11,18 @@ class Lampe{
     +toString(): String
 }
 
+interface Appareil{
+    +allumer():
+    +eteindre():
+    +toString():String
+}
+
 
 class Telecommande{
     +Telecommande():
-    +ajouterLampe(Lampe):
-    +ajouterHifi(Hifi):
-    +activerLampe(int):
-    +activerHifi(int)
-    +desactiverLampe(int):
-    +desactiverHifi(int):
+    +ajouterAppareil(Appareil):
+    +activerAppareil(int):
+    +desactiverAppareil(int):
     +activerTout():
     +toString(): String
 
@@ -33,7 +36,8 @@ class Hifi{
     +toString(): String
 }
 
-Telecommande-->"*" Hifi: -hifis
-Telecommande-->"*" Lampe: -lampes
+Lampe..|> Appareil
+Hifi..|> Appareil
+Telecommande-->"*"Appareil: -appareils
 
 @enduml
