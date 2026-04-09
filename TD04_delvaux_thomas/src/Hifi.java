@@ -12,7 +12,7 @@ class Hifi {
 	/**
 	 * permet d'allumer ou d'augmenter le son de la chaine
 	 */
-	public void allumer() {
+	public void augmenterSon() {
 		this.son += 10;
 		// son maximum
 		if (this.son > 100)
@@ -22,7 +22,7 @@ class Hifi {
 	/**
 	 * permet d'eteindre la chaine (son mis a 0)
 	 */
-	public void eteindre() {
+	public void baisserSon() {
 		this.son = 0;
 
 	}
