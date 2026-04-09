@@ -1,7 +1,7 @@
 /**
  * classe qui represente une chaine televisio,
  */
-class Televsion {
+class Televsion implements Peripherique{
 
     /**
      * l'intensite du son de la chaine on suppose que la chaine est eteinte si

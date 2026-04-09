@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Telecommande {
+public class Telecommande implements Peripherique{
     public ArrayList<Peripherique> peripherie;
     public Telecommande() {
         peripherie = new ArrayList<Peripherique>();
