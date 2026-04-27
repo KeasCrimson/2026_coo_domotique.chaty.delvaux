@@ -44,10 +44,28 @@ class Hifi{
     +eteindre():
     +toString(): String
 }
+class Cheminee {
+    +intensite: int
+    
+    +Cheminee(int):
+    +changerIntensite():
+    +getLumiere(): int
+    +toString(): String
+}
+class adapterCheminee{
+    -cheminee: Cheminee
+
+    +adapterCheminee(Cheminee):
+    +allumer():
+    +eteindre():
+    +toString(): String
+}
 
 Lampe..|> Appareil
 Hifi..|> Appareil
 Telecommande-->"*"Appareil: -appareils
 Television..|>Appareil
+adapterCheminee..|> Appareil
+adapterCheminee--|> Cheminee
 
 @enduml
