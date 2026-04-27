@@ -60,6 +60,22 @@ class AdapterCheminee{
     +eteindre():
     +toString(): String
 }
+class Thermostat {
+    +temperature: int
+
+    +Thermostat(int):
+    +changerTemperature():
+    +getTemperature(): int
+    +toString(): String
+}
+class AdapterThermostat{
+    -thermostat: Thermostat
+
+    +adapterThermostat(Thermostat)
+    +allumer():
+    +eteindre():
+    +toString(): String
+}
 
 Lampe..|> Appareil
 Hifi..|> Appareil
@@ -67,5 +83,7 @@ Telecommande-->"*"Appareil: -appareils
 Television..|>Appareil
 adapterCheminee..|> Appareil
 adapterCheminee--|> Cheminee
+adapterThermostat..|> Appareil
+adapterThermostat--|> Thermostat
 
 @enduml
