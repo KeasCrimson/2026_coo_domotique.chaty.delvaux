@@ -7,9 +7,6 @@ public class AdapterCheminee implements Appareil{
 
     public void allumer(){
         this.cheminee.changerIntensite(this.cheminee.intensite+10);
-        if(this.cheminee.getLumiere()>100) {
-            this.cheminee.changerIntensite(100);
-        }
     }
 
     public void eteindre(){
