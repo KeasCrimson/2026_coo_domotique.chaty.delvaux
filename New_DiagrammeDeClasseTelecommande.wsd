@@ -52,7 +52,7 @@ class Cheminee {
     +getLumiere(): int
     +toString(): String
 }
-class adapterCheminee{
+class AdapterCheminee{
     -cheminee: Cheminee
 
     +adapterCheminee(Cheminee):
