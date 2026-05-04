@@ -1,0 +1,21 @@
+Main crée un objet de type chargeur magasin nommé Chargeur avec comme paramètre un répertoire.
+
+Main appelle la méthode chargerMagasin sur l'objet Chargeur.
+
+Chargeur crée un objet de type magasin qui se nomme magasin.
+
+L'objet chargeur crée un objet chargeurCD nommé chargeCD1 avec comme paramètre un fichier.
+
+L'objet chargeur appelle la méthode chargerCD de chargeCD1.
+
+chargeCD1 crée un objet de type CD nommé cd1 avec comme paramètre l'artiste et le nom du cd.
+
+chargeCD1 appelle la méthode extraitrePiste de cd1.
+
+chargeCD1 utilise ajouterPiste de cd1.
+
+chargeCD1 appelle la méthode extraitrePiste de cd1.
+
+chargeCD1 utilise ajouterPiste de cd1.
+
+chargeur appelle la méthode ajouteCD sur magasin avec comme paramètre cd1
