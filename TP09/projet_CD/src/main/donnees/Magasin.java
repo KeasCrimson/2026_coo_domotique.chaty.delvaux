@@ -56,7 +56,7 @@ public class Magasin {
 	}
 	
 	/**
-	 * permet d'acceder à un CD
+	 * permet d'acceder ï¿½ un CD
 	 * 
 	 * @return le cd a l'indice i ou null si indice est non valide
 	 */
@@ -68,6 +68,22 @@ public class Magasin {
 		return(res);
 	}
 
-	// TODO  ajouter une methode de tri
+	public void trierCd(){
+		ArrayList<CD> new_liste = new ArrayList<CD>();
+		while (!listeCds.isEmpty()) {
+
+			CD minimum = listeCds.get(0);
+
+			for (int i = 0; i < listeCds.size(); i++) {
+				if (minimum.compareTo(listeCds.get(i)) > 0) {
+					minimum = listeCds.get(i);
+				}
+			}
+			
+			new_liste.add(minimum);
+			this.listeCds.remove(minimum);
+		}
+		this.listeCds = new_liste;
+	}
 
 }

@@ -1,4 +1,6 @@
-import XML.ChargeurMagasin;
+package test;
+
+import XMLCOO.ChargeurMagasin;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;

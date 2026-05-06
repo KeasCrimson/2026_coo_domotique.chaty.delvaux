@@ -1,4 +1,4 @@
-package XML;
+package XMLCOO;
 
 import java.io.File;
 import java.io.FileNotFoundException;
