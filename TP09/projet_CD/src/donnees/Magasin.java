@@ -69,7 +69,21 @@ public class Magasin {
 	}
 
 	public void trierCd(){
-		throw new Error("C'est pas fini!!!");
+		ArrayListe<CD> new_liste = new ArrayListe<CD>();
+		while (!listeCds.isEmpty()) {
+
+			CD minimum = listeCds.get(0);
+
+			for (int i = 0; i < listeCds.size(); i++) {
+				if (minimum.compareTo(listeCds.get(i)) > 0) {
+					minimum = listeCds.get(i);
+				}
+			}
+			
+			new_liste.add(minimum);
+			this.listeCds.remove(minimum);
+		}
+		this.listeCds = new_liste;
 	}
 
 }
