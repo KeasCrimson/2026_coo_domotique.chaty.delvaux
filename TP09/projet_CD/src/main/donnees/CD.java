@@ -104,4 +104,12 @@ public class CD {
 		}
 		return comparaison;
 	}
+
+	public int compareToArtiste(CD cd) {
+		int comparaison = this.nomArtiste.compareTo(cd.nomArtiste);
+		if (comparaison == 0) {
+			return this.nomCD.compareTo(cd.nomCD);
+		}
+		return comparaison;
+	}
 }

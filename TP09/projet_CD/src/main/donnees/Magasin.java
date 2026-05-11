@@ -86,4 +86,22 @@ public class Magasin {
 		this.listeCds = new_liste;
 	}
 
+	public void trierCdArtistes(){
+		ArrayList<CD> new_liste = new ArrayList<CD>();
+		while (!listeCds.isEmpty()) {
+
+			CD minimum = listeCds.get(0);
+
+			for (int i = 0; i < listeCds.size(); i++) {
+				if (minimum.compareToArtiste(listeCds.get(i)) > 0) {
+					minimum = listeCds.get(i);
+				}
+			}
+
+			new_liste.add(minimum);
+			this.listeCds.remove(minimum);
+		}
+		this.listeCds = new_liste;
+	}
+
 }
