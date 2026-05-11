@@ -97,19 +97,15 @@ public class CD {
 		return (resultat);
 	}
 
-	public int compareTo(CD cd) {
-		int comparaison = this.nomCD.compareTo(cd.nomCD);
-		if (comparaison == 0) {
-			return this.nomArtiste.compareTo(cd.nomArtiste);
-		}
-		return comparaison;
+	public String getNomArtiste() {
+		return nomArtiste;
 	}
 
-	public int compareToArtiste(CD cd) {
-		int comparaison = this.nomArtiste.compareTo(cd.nomArtiste);
-		if (comparaison == 0) {
-			return this.nomCD.compareTo(cd.nomCD);
-		}
-		return comparaison;
+	public String getNomCD() {
+		return nomCD;
+	}
+
+	public List<InfoPiste> getPistes() {
+		return pistes;
 	}
 }
