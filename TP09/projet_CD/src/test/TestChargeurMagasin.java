@@ -11,7 +11,7 @@ public class TestChargeurMagasin {
 
     @Test
     public void test_chargerMagasin_RepValide(){
-        ChargeurMagasin charge1 = new ChargeurMagasin("documents");
+        ChargeurMagasin charge1 = new ChargeurMagasin("../documents");
         boolean test = true;
         try {
             charge1.chargerMagasin();
@@ -24,7 +24,7 @@ public class TestChargeurMagasin {
 
     @Test
     public void test_chargerMagasin_RepInvalide(){
-        ChargeurMagasin charge1 = new ChargeurMagasin("../docs");
+        ChargeurMagasin charge1 = new ChargeurMagasin("../../docs");
         boolean test = true;
         try {
             charge1.chargerMagasin();
