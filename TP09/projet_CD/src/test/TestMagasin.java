@@ -38,6 +38,5 @@ public class TestMagasin {
 
         assertEquals(m.getCd(0).toString(), cd1.toString());
         assertEquals(m.getCd(11).toString(), cd2.toString());
-
     }
 }
